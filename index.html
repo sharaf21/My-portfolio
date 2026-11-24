@@ -1460,6 +1460,44 @@
             font-size: 0.86rem;
             color: var(--text-muted);
         }
+       /* Service Ticket — matches nav link styling */
+.nav-service-ticket {
+    /* inherits font-size and color from .main-nav a */
+    display: inline-flex;
+    align-items: center;
+    gap: 0.3rem;
+    padding: 0.25rem 0;
+    border-bottom: 2px solid transparent;
+    transition: color 0.2s, border-color 0.2s;
+    white-space: nowrap;
+}
+
+    .nav-service-ticket:hover {
+        color: var(--accent);
+        border-bottom-color: var(--accent);
+    }
+    .brand {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    font-size: 0.95rem;
+    white-space: nowrap;
+}
+
+.brand-avatar {
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: 50% 18%;
+    border: 1px solid var(--border-glow);
+    box-shadow: 0 0 10px rgba(56, 189, 248, 0.35);
+    background: #0d1d36;
+    flex-shrink: 0;
+    display: block;
+}
 
     </style>
 </head>
@@ -1469,10 +1507,13 @@
     <canvas id="bg-canvas" aria-hidden="true"></canvas>
 
     <header class="site-header">
-        <a class="brand" href="#home" aria-label="Sharaf Ahamed home">
-            <span class="brand-mark">S<span>.</span></span>
-            <span>SHARAF <b>AHAMED</b></span>
-        </a>
+       <a class="brand" href="#home" aria-label="Sharaf Ahamed home">
+    <img src="images/my profile.jpeg"
+         alt="Sharaf Ahamed portrait"
+         class="brand-avatar"
+         onerror="this.style.display='none';">
+    <span>SHARAF <b>AHAMED</b></span>
+</a>
         <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation" aria-expanded="false">☰</button>
         <nav class="main-nav" id="mainNav">
             <a href="#home">Live NOC</a>
@@ -1482,8 +1523,12 @@
             <a href="#experience">Experience</a>
             <a href="#education">Education</a>
             <a href="#contact">Contact</a>
+            <a class="nav-service-ticket"
+   <a class="nav-service-ticket" href="https://wa.me/94760722022?text=Hi%20Sharaf%2C%20I%27d%20like%20to%20raise%20a%20service%20ticket." target="_blank" rel="noopener noreferrer" aria-label="Service Ticket via WhatsApp">
+    🎧 IT Support
+</a>
         </nav>
-        <a class="nav-cta" href="Sharaf-Ahamed-CV.pdf" download>Download CV <span>↓</span></a>
+        <a class="nav-cta" href="D:\My Projects\Sharaf portfolio updated\Portfolio\Sharaf CV.pdf">Download CV <span>↓</span></a>
     </header>
 
     <main>
@@ -1494,7 +1539,7 @@
                 <div class="hero-copy glass-panel">
                     <div>
                         <div class="profile-top">
-                            <img src="profile.jpg"
+                            <img src="D:\My Projects\Sharaf portfolio updated\Portfolio\images\my profile.jpeg"
                                  alt="Sharaf Ahamed portrait"
                                  class="profile-avatar"
                                  onerror="this.style.display='none';">
